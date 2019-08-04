@@ -4,10 +4,6 @@ const app = express();
 
 app.use(express.json({ extended: false }));
 
-app.get("/", (req, res) => {
-  res.send("Server is up");
-});
-
 app.use("/api/register", require("./routes/register"));
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/posts", require("./routes/posts"));
