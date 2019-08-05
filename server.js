@@ -4,9 +4,9 @@ const app = express();
 
 app.use(express.json({ extended: false }));
 
-app.use("/api/register", require("./routes/register"));
-app.use("/api/auth", require("./routes/auth"));
-app.use("/api/posts", require("./routes/posts"));
+app.use("register", require("./routes/register"));
+app.use("auth", require("./routes/auth"));
+app.use("posts", require("./routes/posts"));
 
 const port = process.env.PORT || 5000;
 
